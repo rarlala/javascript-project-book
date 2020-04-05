@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <script defer src="index.js"></script>
+    <title>Light Box project</title>
+</head>
+
+<body>
+    <header>
+        <img class="thumb active" src="image/sample1.png" alt="javascript" width="100" onclick="lightbox_open(1)" />
+        <img class="thumb" src="image/sample2.jpg" alt="html" width="100" onclick="lightbox_open(2)" />
+        <img class="thumb" src="image/sample3.png" alt="sample" width="100" onclick="lightbox_open(3)" />
+    </header>
+
+    <div id="block"></div>
+
+    <div id="lightbox">
+        <h1>Light Box Sample</h1>
+        <p>실습을 통해 Light Box 구현을 학습해봅니다.</p>
+        <br/><br/>
+
+        <figure>
+            <img class="active" src="image/sample1.png" alt="javascript" />
+            <img src="image/sample2.jpg" alt="html " />
+            <img src="image/sample3.png" alt="sample" />
+        </figure>
+
+        <div class="indicator">
+            <button onclick="change_img(this.innerHTML)">1</button>
+            <button onclick="change_img(this.innerHTML)">2</button>
+            <button onclick="change_img(this.innerHTML)">3</button>
+        </div>
+
+        <div class="btn-close" onclick="lightbox_close()">X</div>
+    </div>
+
+
+</body>
+
+</html>
