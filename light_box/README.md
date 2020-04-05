@@ -76,3 +76,7 @@
 - `<figure>`는 구획 루트이므로 `<figure>` 요소의 콘텐츠는 문서의 주 개요에서 제외된다.
 
 - 안에 (처음이나 마지막 자식으로) `<figcaption>`을 넣어서 설명을 덧붙일 수 있다. 제일 처음 `<figcaption>`을 설명으로 사용한다.
+
+
+
+> sample image를 얻어 작업하고 싶은 경우 `placeholder.com` 사이트에서 이미지 크기등을 원하는대로 조정해 sample image를 얻을 수 있다.

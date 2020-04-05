@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>이미지 목록에서 버튼을 클릭하면 첫번째 이미지와 마지막 이미지가 서로 교체되도록 changeimage()함수를 작성해라</p>
+    <p>- 조건 : 자바스크립트의 getAttribute()와 setAttribute()메서드 사용하기</p>
+
+    <br/><br/>
+
+    <figure>
+        <img src="https://via.placeholder.com/200x100/abc?text=img1" alt="" name="img1" />
+        <img src="https://via.placeholder.com/200x100/cba?text=img1" alt="" name="img2" />
+        <img src="https://via.placeholder.com/200x100/bac?text=img1" alt="" name="img3" />
+    </figure>
+
+    <div>
+        <button onclick="changeImg()">Change Image</button>
+    </div>
+
+    <script>
+        const $imgs = document.querySelectorAll('img')
+
+        function changeImg() {
+            const last_index = $imgs.length - 1
+            const first_src = $imgs[0].getAttribute('src')
+            const last_src = $imgs[last_index].getAttribute('src')
+
+            $imgs[0].setAttribute('src', last_src)
+            $imgs[last_index].setAttribute('src', first_src)
+        }
+    </script>
+</body>
+
+</html>
