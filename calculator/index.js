@@ -1,14 +1,14 @@
-// let $inp = document.forms['cal'];
-// let $input = $inp.getElementsByTagName('input');
-// let $cls_btn = document.getElementsByClassName('cls_btn')[0];
-// let $result_btn = document.getElementsByClassName('result_btn')[0];
+// const $inp = document.forms['cal'];
+// const $input = $inp.getElementsByTagName('input');
+// const $cls_btn = document.getElementsByClassName('cls_btn')[0];
+// const $result_btn = document.getElementsByClassName('result_btn')[0];
 
 // jquery로 변수선언
-let $inp = $('form[name=cal]');
-let $input = $inp.find('input');
-let $cls_btn = $('.cls_btn');
-let $result_btn = $inp.find('input[name=result]');
-let $result = $inp.find('input[name=result]');
+const $inp = $('form[name=cal]');
+const $input = $inp.find('input');
+const $cls_btn = $('.cls_btn');
+const $result_btn = $inp.find('input[name=result]');
+const $result = $inp.find('input[name=result]');
 
 // 계산기 입력 처리 함수
 
@@ -19,7 +19,7 @@ function calc(value) {
     }
 
     // 입력 값을 결과창에 출력한다.
-    var val = $result.val() + value;
+    let val = $result.val() + value;
     $result.val(val);
 }
 
@@ -32,7 +32,7 @@ function clr() {
 // 계산 결과 처리 함수
 
 function my_result() {
-    var calc = eval($result.val());
+    let calc = eval($result.val());
     $result.val(calc);
 }
 
@@ -41,7 +41,7 @@ function my_result() {
 // 숫자 및 사칙 연산 버튼
 
 $('input').click(function() {
-    var $input_value = $(this).val();
+    let $input_value = $(this).val();
     if ($input.value != '=' && $input.value != 'clear') {
         calc(this.value);
     }
