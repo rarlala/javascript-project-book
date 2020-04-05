@@ -22,3 +22,6 @@ li[0].onclick = function(){
   this.style.backgroundColor = 'red';
 }
 ```
+
+### eval
+eval()은 문자로 표현된 JavaScript 코드를 실행하는 함수입니다.
